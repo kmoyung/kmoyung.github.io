@@ -7,4 +7,4 @@ layout: default
 **Solid tumors have frequent mutation, copy number variation and differential mRNA expression of GPCRs: Are such
 GPCRs functional oncogenes**
 Cancer Research (AACR 2018)  
-Krishna Sriram, ___Kevin Moyung___, Ross Corriden, Paul A. Insel
+Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Paul A. Insel
