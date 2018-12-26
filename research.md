@@ -8,7 +8,7 @@ layout: default
 
 **Solid tumors have frequent mutation, copy number variation and differential mRNA expression of GPCRs: Are such
 GPCRs functional oncogenes**  
-[Cancer Research (AACR 2018)](http://cancerres.aacrjournals.org/content/78/13_Supplement/3293.short)
+[Cancer Research (AACR 2018)](http://cancerres.aacrjournals.org/content/78/13_Supplement/3293.short)  
 Krishna Sriram, Kevin Moyung, Ross Corriden, Paul A. Insel
 
 **HRH1: A Novel GPCR Drug Target in Pancreatic Cancer**  
