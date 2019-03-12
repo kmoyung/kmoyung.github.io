@@ -6,12 +6,8 @@ layout: default
 
 ### 2019
 
-**GPCRs show widespread differential mRNA expression and frequent mutation and copy number variation in solid tumors**   
-[bioRxiv](https://www.biorxiv.org/content/10.1101/546481v1?rss=1)   
-Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Hannah Carter, Paul Insel
-
-**The landscape of GPCR expression, mutation and copy number variation in solid tumors**  
-PLoS Biology (Under Review)  
+**GPCRs show widespread differential mRNA expression and frequent mutation and copy number variation in solid tumors**  
+PLoS Biology (Under Review), [bioRxiv](https://www.biorxiv.org/content/10.1101/546481v1?rss=1)   
 Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Hannah Carter, Paul Insel  
 
 **High-content detection of GPCR mRNA expression: which methods work best?**  
