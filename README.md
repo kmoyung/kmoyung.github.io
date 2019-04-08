@@ -7,5 +7,8 @@ I will be pursuing a **PhD in Computational Biology and Bioinformatics** at **Du
 My research interests include cancer genomics, translational research, and machine learning.
 
 
+**E-mail:** kevinmoyung (at) gmail (dot) com
+
+
 
 
