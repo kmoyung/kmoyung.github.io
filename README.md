@@ -1,13 +1,13 @@
 ## Hi There!
 
-I'm Kevin, a fourth-year undergraduate at [UC San Diego](http://ucsd.edu) studying **Bioinformatics**. I'm currently doing computational research in the [Insel Lab](http://insellab.ucsd.edu).
+I am a fourth-year undergraduate at [UC San Diego](http://ucsd.edu) studying Biology: Bioinformatics and am studying the role of G protein-coupled receptors in cancer at the [Insel Lab](http://insellab.ucsd.edu).
 
-I will be pursuing a **PhD in Computational Biology and Bioinformatics** at **Duke University** this Fall.
+I will be pursuing a [PhD in Computational Biology and Bioinformatics](https://genome.duke.edu/education/CBB) at [Duke University](http://duke.edu) beginning this Fall 2019.
 
 My research interests include cancer genomics, translational research, and machine learning.
 
 
-**E-mail:** kevinmoyung (at) gmail (dot) com
+You can reach me at: kevinmoyung (at) gmail (dot) com
 
 
 
