@@ -1,6 +1,6 @@
 ## Curriculum Vitae
 
-![Download CV](https://kmoyung.github.io/CV_KevinMoyung.pdf)
+[Download CV](https://kmoyung.github.io/CV_KevinMoyung.pdf)
 
 
 ### Education
