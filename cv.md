@@ -4,10 +4,15 @@
 
 
 ### Education
-- PhD in Computational Biology and Bioinformatics, *Duke University* (Aug. 2019 - ???)  
-- BS in Biology w/ Specialization in Bioinformatics, *University of California, San Diego* (Sep. 2015 - Jun. 2019)
+- PhD in Computational Biology and Bioinformatics, *Duke University* (Aug 2019 - ???)  
+- BS in Biology w/ Specialization in Bioinformatics, *University of California, San Diego* (Sep 2015 - Jun 2019)
 
 ### Experience
-- Bioinformatics Researcher, *Dr. Paul Insel Lab, UC San Diego* (Nov. 2016 - Jun. 2019)
-- Bioinformatics Intern, *Ferring Research Institute* (Jun. 2018 - Aug. 2018)
-- Immune Monitoring and Biomarker Development Intern, *Aduro Biotech* (Jun. 2017 - Sep. 2017)
+- Bioinformatics Researcher, *Dr. Paul Insel Lab, UC San Diego* (Nov 2016 - Jun 2019)
+- Bioinformatics Intern, *Ferring Research Institute* (Jun 2018 - Aug 2018)
+- Immune Monitoring and Biomarker Development Intern, *Aduro Biotech* (Jun 2017 - Sep 2017)
+- Laboratory Assistant, *Dr. Michael Karin Lab, UC San Diego* (Jan 2016 - May 2017)
+
+### Leadership
+- Community Service Chair, *Undergraduate Bioinformatics Club at UCSD* (Sep 2017 - Jun 2018)
+- Bioinformatics Expo Chair, *Undergraduate Bioinformatics Club at UCSD* (Mar 2017 - Jun 2017)
