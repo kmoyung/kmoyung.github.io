@@ -5,6 +5,8 @@
 
 ### Education
 
+***
+
 **Ph.D. in Computational Biology and Bioinformatics**     
 Duke University (Aug 2019 - ???)   
 
@@ -14,6 +16,8 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 
 ### Experience
+
+***
 
 **Student Researcher, Bioinformatics**     
 Paul Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
@@ -29,6 +33,8 @@ Michael Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 
 
 ### Leadership
+
+***
 
 **Chair, Community Service**   
 Undergraduate Bioinformatics Club at UCSD (Sep 2017 - Jun 2018)       
