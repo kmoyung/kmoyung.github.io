@@ -15,13 +15,13 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ### Experience
 
-**Bioinformatics Researcher**     
+**Student Researcher, Bioinformatics**     
 Paul Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
 
-**Bioinformatics Intern**     
+**Intern, Bioinformatics**     
 Ferring Research Institute (Jun 2018 - Aug 2018)   
 
-**Immune Monitoring and Biomarker Development Intern**      
+**Intern, Immune Monitoring and Biomarker Development**      
 Aduro Biotech (Jun 2017 - Sep 2017)   
 
 **Laboratory Assistant**     
@@ -30,8 +30,8 @@ Michael Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 
 ### Leadership
 
-**Community Service Chair**   
+**Chair, Community Service**   
 Undergraduate Bioinformatics Club at UCSD (Sep 2017 - Jun 2018)       
 
-**Bioinformatics Expo Chair**    
+**Chair, Bioinformatics Expo**    
 Undergraduate Bioinformatics Club at UCSD (Mar 2017 - Jun 2017)     
