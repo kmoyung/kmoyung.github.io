@@ -11,7 +11,7 @@ PLoS Biology (Under Review), [BioRxiv (Preprint)](https://www.biorxiv.org/conten
 Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Hannah Carter, Paul Insel  
 
 **High-content detection of GPCR mRNA expression: which methods work best?**  
-ACS Pharmacology Translational Science. Special Issue on GPCRs (In Preparation)  
+ACS Pharmacology Translational Science. Special Issue on GPCRs (Submitted April 2019)  
 Krishna Sriram, Shu Z. Wiley, Matthew W. Gorr, <u>Kevin Moyung</u>, Randall P. French, Andrew M. Lowy, Paul A. Insel  
 
 ### 2018
