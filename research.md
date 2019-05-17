@@ -6,6 +6,8 @@ layout: default
 
 ### 2019
 
+***
+
 **GPCRs show widespread differential mRNA expression and frequent mutation and copy number variation in solid tumors**  
 PLoS Biology (Under Review), [BioRxiv (Preprint)](https://www.biorxiv.org/content/10.1101/546481v1?rss=1)   
 Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Hannah Carter, Paul Insel  
@@ -15,6 +17,8 @@ ACS Pharmacology Translational Science. Special Issue on GPCRs (Under Review)
 Krishna Sriram, Shu Z. Wiley, Matthew W. Gorr, <u>Kevin Moyung</u>, Randall P. French, Andrew M. Lowy, Paul A. Insel  
 
 ### 2018
+
+***
 
 **Solid tumors have frequent mutation, copy number variation and differential mRNA expression of GPCRs: Are such
 GPCRs functional oncogenes**  
