@@ -8,6 +8,10 @@ layout: default
 
 ***
 
+**Detection and quantification of GPCR mRNA: An assessment and implications of data from high-content methods**   
+[BioRxiv](https://www.biorxiv.org/content/10.1101/734863v1.abstract)   
+Krishna Sriram, Shu Z. Wiley, <u>Kevin Moyung</u>, Matthew W. Gorr, Cristina Salmerón, Jordin Marucut, Randall P. French, Andrew M. Lowy,  Paul A. Insel   
+
 **GPCRs show widespread differential mRNA expression and frequent mutation and copy number variation in solid tumors**  
 PLoS Biology (Accepted), [BioRxiv (Preprint)](https://www.biorxiv.org/content/10.1101/546481v1?rss=1)   
 Krishna Sriram, <u>Kevin Moyung</u>, Ross Corriden, Hannah Carter, Paul Insel  
