@@ -20,10 +20,10 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 ***
 
 **Rotation Student**    
-Greg Wray Lab, Duke University (Sep 2019 - Nov 2019)    
+Wray Lab, Duke University (Sep 2019 - Nov 2019)    
 
 **Student Researcher, Bioinformatics**     
-Paul Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
+Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
 
 **Intern, Bioinformatics**     
 Ferring Research Institute (Jun 2018 - Aug 2018)   
@@ -32,7 +32,7 @@ Ferring Research Institute (Jun 2018 - Aug 2018)
 Aduro Biotech (Jun 2017 - Sep 2017)   
 
 **Laboratory Assistant**     
-Michael Karin Lab, University of California, San Diego (Jan 2016 - May 2017)   
+Karin Lab, University of California, San Diego (Jan 2016 - May 2017)   
 
 
 ### Leadership
