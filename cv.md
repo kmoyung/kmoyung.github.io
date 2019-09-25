@@ -19,6 +19,9 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
+**Rotation Student**    
+Greg Wray Lab, Duke University (Sep 2019 - Nov 2019)    
+
 **Student Researcher, Bioinformatics**     
 Paul Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
 
