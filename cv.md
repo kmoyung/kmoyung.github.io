@@ -20,6 +20,9 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 ***
 
 **Rotation Student**    
+Xie Lab, Duke University (Jan 2020 - ???)    
+
+**Rotation Student**    
 Wray Lab, Duke University (Sep 2019 - Nov 2019)    
 
 **Student Researcher, Bioinformatics**     
@@ -35,9 +38,12 @@ Aduro Biotech (Jun 2017 - Sep 2017)
 Karin Lab, University of California, San Diego (Jan 2016 - May 2017)   
 
 
-### Leadership
+### Extracurriculars
 
 ***
+
+**Recruitment Committee Member**
+Computational Biology and Bioinformatics PhD Program at Duke (Nov 2019 - Feb 2020)
 
 **Chair, Community Service**   
 Undergraduate Bioinformatics Club at UCSD (Sep 2017 - Jun 2018)       
