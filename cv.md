@@ -20,7 +20,7 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 ***
 
 **Rotation Student**    
-Xie Lab, Duke University (Jan 2020 - ???)    
+Xie Group, Duke University (Jan 2020 - ???)    
 
 **Rotation Student**    
 Wray Lab, Duke University (Sep 2019 - Nov 2019)    
