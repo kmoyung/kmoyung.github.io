@@ -42,8 +42,8 @@ Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 
 ***
 
-**Recruitment Committee Member**
-Computational Biology and Bioinformatics PhD Program at Duke (Nov 2019 - Feb 2020)
+**Recruitment Committee Member**    
+Computational Biology and Bioinformatics PhD Program at Duke (Nov 2019 - Feb 2020)   
 
 **Chair, Community Service**   
 Undergraduate Bioinformatics Club at UCSD (Sep 2017 - Jun 2018)       
