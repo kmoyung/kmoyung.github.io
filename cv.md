@@ -18,11 +18,13 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 ### Experience
 
 ***
+**Research Rotation**    
+MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)    
 
-**Rotation Student**    
-Xie Group, Duke University (Jan 2020 - ???)    
+**Research Rotation**    
+Xie Group, Duke University (Jan 2020 - Apr 2020)    
 
-**Rotation Student**    
+**Research Rotation**    
 Wray Lab, Duke University (Sep 2019 - Nov 2019)    
 
 **Student Researcher, Bioinformatics**     
@@ -41,6 +43,8 @@ Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 ### Extracurriculars
 
 ***
+**Chair, Recruitment Committee**    
+Computational Biology and Bioinformatics PhD Program at Duke (Feb 2020 - Feb 2021)
 
 **Member, Recruitment Committee**    
 Computational Biology and Bioinformatics PhD Program at Duke (Nov 2019 - Feb 2020)   
