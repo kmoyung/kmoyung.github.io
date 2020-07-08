@@ -20,7 +20,7 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
-**Graduate Researcher**
+**Graduate Researcher**  
 MacAlpine Lab, Duke University (Jul 2020 - )  
 
 **Research Rotation**    
