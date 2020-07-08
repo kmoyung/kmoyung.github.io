@@ -9,7 +9,7 @@ Last updated: March 2020
 ***
 
 **Ph.D. in Computational Biology and Bioinformatics**     
-Duke University (Aug 2019 - ???)   
+Duke University (Aug 2019 - )   
 
 
 **B.S. in Biology w/ Specialization in Bioinformatics**     
@@ -19,6 +19,10 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 ### Experience
 
 ***
+
+**Graduate Researcher**
+MacAlpine Lab, Duke University (Jul 2020 - )  
+
 **Research Rotation**    
 MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)    
 
