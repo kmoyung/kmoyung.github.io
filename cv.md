@@ -20,8 +20,8 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
-**Graduate Researcher**  
-MacAlpine Lab, Duke University (Jul 2020 - )  
+**Graduate Student**  
+Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
 
 **Research Rotation**    
 MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)    
