@@ -1,8 +1,8 @@
 ## Curriculum Vitae
 
-[Download CV](https://kmoyung.github.io/CV_KevinMoyung.pdf)  
+[Download CV](https://kmoyung.github.io/Kevin_Moyung_CV_Mar2021.pdf)  
 
-Last updated: March 2020
+Last updated: March 2021
 
 ### Education
 
@@ -44,6 +44,10 @@ Aduro Biotech (Jun 2017 - Sep 2017)
 **Laboratory Assistant**     
 Karin Lab, University of California, San Diego (Jan 2016 - May 2017)   
 
+### Extracurriculars
+
+***
+**NSF Graduate Research Fellowship Program (Honorable Mention, 2021)**    
 
 ### Extracurriculars
 
