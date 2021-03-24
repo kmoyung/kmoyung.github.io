@@ -44,7 +44,7 @@ Aduro Biotech (Jun 2017 - Sep 2017)
 **Laboratory Assistant**     
 Karin Lab, University of California, San Diego (Jan 2016 - May 2017)   
 
-### Extracurriculars
+### Awards and Honors
 
 ***
 **NSF Graduate Research Fellowship Program (Honorable Mention, 2021)**    
