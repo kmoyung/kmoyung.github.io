@@ -4,6 +4,14 @@ layout: default
 
 ## Research
 
+### 2020
+
+***
+
+**New insights from The Cancer Genome Atlas: Implications for GPCR expression in cell compartments in solid tumors**
+[The FASEB Journal (Abstract)](https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fasebj.2020.34.s1.07453)   
+Krishna Sriram, <u>Kevin Moyung</u>, Paul Insel  
+
 ### 2019
 
 ***
