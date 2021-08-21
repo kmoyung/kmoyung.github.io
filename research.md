@@ -2,6 +2,9 @@
 layout: default
 ---
 
+[Google Scholar Profile](https://scholar.google.com/citations?user=Ny_BdjoAAAAJ&hl=en&oi=ao)   
+_
+
 ## Research
 
 ### 2020
