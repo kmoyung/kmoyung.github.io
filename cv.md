@@ -20,25 +20,21 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
-**Graduate Student**  
+**Graduate Student Researcher**  
 Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
 
-**Research Rotation**    
-MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)    
-
-**Research Rotation**    
-Xie Group, Duke University (Jan 2020 - Apr 2020)    
-
-**Research Rotation**    
+**Graduate Research Rotations**    
+MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)  
+Xie Group, Duke University (Jan 2020 - Apr 2020)  
 Wray Lab, Duke University (Sep 2019 - Nov 2019)    
 
-**Student Researcher, Bioinformatics**     
+**Bioinformatics Researcher**     
 Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
 
-**Intern, Bioinformatics**     
+**Bioinformatics Intern**     
 Ferring Research Institute (Jun 2018 - Aug 2018)   
 
-**Intern, Immune Monitoring and Biomarker Development**      
+**Immune Monitoring and Biomarker Development Intern**      
 Aduro Biotech (Jun 2017 - Sep 2017)   
 
 **Laboratory Assistant**     
@@ -48,6 +44,7 @@ Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 
 ***
 **NSF Graduate Research Fellowship Program (Honorable Mention, 2021)**    
+**NIH T32 Training Grant (2019-2021)**  
 
 ### Extracurriculars
 
