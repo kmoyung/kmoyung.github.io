@@ -20,7 +20,7 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
-**Graduate Student Researcher**  
+**PhD Candidate**  
 Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
 
 **Project Manager**   
