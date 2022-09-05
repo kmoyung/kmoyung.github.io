@@ -23,10 +23,13 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 **Graduate Student Researcher**  
 Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
 
+**Project Manager**   
+Data+, Duke University (May 2022 - Jul 2022)    
+
 **Graduate Research Rotations**    
 MacAlpine Lab, Duke University (Apr 2020 - Jun 2020)  
 Xie Group, Duke University (Jan 2020 - Apr 2020)  
-Wray Lab, Duke University (Sep 2019 - Nov 2019)    
+Wray Lab, Duke University (Sep 2019 - Nov 2019)     
 
 **Bioinformatics Researcher**     
 Insel Lab, University of California, San Diego (Nov 2016 - Jun 2019)   
@@ -45,6 +48,11 @@ Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 ***
 **NSF Graduate Research Fellowship Program (Honorable Mention, 2021)**    
 **NIH T32 Training Grant (2019-2021)**  
+
+### Teaching Experience
+
+**Graduate Teaching Assistance**  
+COMPSCI 260, Introduction to Computational Genomics (Aug 2022 - Dec 2022)   
 
 ### Extracurriculars
 
