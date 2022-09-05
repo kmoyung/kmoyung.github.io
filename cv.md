@@ -51,6 +51,7 @@ Karin Lab, University of California, San Diego (Jan 2016 - May 2017)
 
 ### Teaching Experience
 
+***
 **Graduate Teaching Assistance**  
 COMPSCI 260, Introduction to Computational Genomics (Aug 2022 - Dec 2022)   
 
