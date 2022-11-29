@@ -1,8 +1,8 @@
 ## Curriculum Vitae
 
-[Download CV](https://kmoyung.github.io/Kevin_Moyung_CV_Mar2021.pdf)  
+[View my CV](https://kmoyung.github.io/Kevin_Moyung_CV_Nov2022_Redacted.pdf)  
 
-Last updated: March 2021
+Last updated: November 2022
 
 ### Education
 
