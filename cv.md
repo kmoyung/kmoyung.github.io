@@ -23,6 +23,9 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 **PhD Candidate**  
 Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
 
+**Data, AI, and Genome Sciences Intern**  
+Merck Inc. (Jun 2023 - Aug 2023)  
+
 **Project Manager**   
 Data+, Duke University (May 2022 - Jul 2022)    
 
