@@ -20,7 +20,7 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
-**Computational Biologist**
+**Computational Biologist**  
 Tavros Therapeutics (Sep 2024 - Present)
 
 **PhD Candidate**  
