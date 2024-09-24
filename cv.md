@@ -9,7 +9,7 @@ Last updated: November 2022
 ***
 
 **Ph.D. in Computational Biology and Bioinformatics**     
-Duke University (Aug 2019 - )   
+Duke University (Aug 2019 - Aug 2024)   
 
 
 **B.S. in Biology w/ Specialization in Bioinformatics**     
@@ -20,8 +20,11 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
+**Computational Biologist**
+Tavros Therapeutics (Sep 2024 - Present)
+
 **PhD Candidate**  
-Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - )  
+Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - Aug 2024)  
 
 **Data, AI, and Genome Sciences Intern**  
 Merck (Jun 2023 - Aug 2023)  
