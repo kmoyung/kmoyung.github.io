@@ -20,8 +20,12 @@ University of California, San Diego (Sep 2015 - Jun 2019)
 
 ***
 
+**Scientist, Computational Biology**  
+Vividion Therapeutics (Dec 2024 - Present)
+
 **Computational Biologist**  
-Tavros Therapeutics (Sep 2024 - Present)
+Tavros Therapeutics (Sep 2024 - Dec 2024)  
+Acquired by Vividion Therapeutics  
 
 **PhD Candidate**  
 Advisors: Dave MacAlpine and Alex Hartemink, Duke University (Jul 2020 - Aug 2024)  
