@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career — Kevin Moyung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* PAGE HEADER */
+.page-header {
+  padding: 9rem 3rem 4rem;
+  background: var(--ink);
+  color: #fff;
+  position: relative; overflow: hidden;
+}
+.page-header::after {
+  content: 'CAREER';
+  position: absolute; right: -0.02em; top: 50%; transform: translateY(-50%);
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(6rem, 12vw, 11rem);
+  font-style: italic; color: rgba(255,255,255,0.04);
+  pointer-events: none; white-space: nowrap; line-height: 1;
+}
+.page-header .section-label { color: var(--accent2); }
+.page-header .section-label::after { background: var(--accent2); }
+.ph-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05; letter-spacing: -0.02em; color: #fff;
+  margin-bottom: 1rem; position: relative; z-index: 1;
+}
+.ph-sub { font-size: 0.95rem; color: rgba(255,255,255,.45); max-width: 500px; line-height: 1.7; position: relative; z-index: 1; }
+
+/* EXPERIENCE TIMELINE */
+.timeline-section { background: var(--bg); padding: 5rem 3rem; }
+.timeline { position: relative; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+
+.exp-block {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  padding: 3rem 0 3rem 2rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.exp-block::before {
+  content: ''; position: absolute; left: -4px; top: 3.5rem;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--white); border: 2px solid var(--border);
+  transition: border-color 0.2s, background 0.2s;
+}
+.exp-block:hover::before { background: var(--accent); border-color: var(--accent); }
+
+.exp-meta { padding-top: 0.1rem; }
+.exp-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: 500;
+}
+.exp-company {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--ink2); margin-bottom: 0.25rem;
+}
+.exp-location { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
+.exp-type {
+  display: inline-block; margin-top: 0.6rem;
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  padding: 0.18rem 0.55rem; border-radius: 2px;
+  background: var(--subtle); color: var(--ink2);
+}
+.exp-type.industry { background: #e8f0ff; color: #1a3fff; }
+.exp-type.academic { background: #e0faf3; color: #007a5a; }
+
+.exp-content {}
+.exp-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.55rem; letter-spacing: -0.01em;
+  color: var(--ink); margin-bottom: 0.75rem; line-height: 1.2;
+}
+.exp-summary { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
+.exp-section-head {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 0.5rem; margin-top: 1.25rem;
+}
+.exp-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.exp-highlights li {
+  font-size: 0.85rem; color: var(--ink2); padding-left: 1.1rem;
+  position: relative; line-height: 1.6;
+}
+.exp-highlights li::before { content: '→'; position: absolute; left: 0; color: var(--accent2); font-size: 0.75rem; top: 0.1rem; }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; }
+
+/* PUBLICATIONS */
+.pubs-section { background: var(--white); padding: 5rem 3rem; }
+.pub-list { display: flex; flex-direction: column; gap: 0; }
+.pub-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 60px 1fr;
+  gap: 1.5rem; align-items: start;
+}
+.pub-year {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem; color: var(--accent); font-weight: 500;
+  padding-top: 0.15rem;
+}
+.pub-title { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.4; }
+.pub-authors { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted); margin-bottom: 0.3rem; }
+.pub-authors strong { color: var(--accent); font-style: normal; }
+.pub-journal { font-size: 0.78rem; color: var(--muted); font-style: italic; margin-bottom: 0.5rem; }
+.pub-links { display: flex; gap: 0.5rem; }
+.pub-link {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  padding: 0.18rem 0.5rem; border: 1px solid var(--border);
+  color: var(--ink2); text-decoration: none; border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.pub-link:hover { border-color: var(--accent); color: var(--accent); }
+
+/* SKILLS DEEP DIVE */
+.skills-deep { background: var(--bg); padding: 5rem 3rem; }
+.skills-table { width: 100%; border-collapse: collapse; }
+.skills-table th {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); text-align: left; padding: 0 0 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.skills-table td { padding: 0.85rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+.skills-table td:first-child { font-size: 0.82rem; font-weight: 700; color: var(--ink); width: 220px; }
+.skills-table td:nth-child(2) { font-size: 0.78rem; color: var(--muted); line-height: 1.65; padding-right: 2rem; }
+.skills-table td:last-child { min-width: 200px; }
+.skill-bar-wrap { display: flex; align-items: center; gap: 0.6rem; }
+.skill-bar { flex: 1; height: 3px; background: var(--subtle); border-radius: 2px; overflow: hidden; }
+.skill-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 1s ease; }
+.skill-level { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--muted); white-space: nowrap; }
+
+@media (max-width: 768px) {
+  .page-header { padding: 7rem 1.5rem 3rem; }
+  .exp-block { grid-template-columns: 1fr; gap: 0.5rem; padding: 2rem 0 2rem 1.5rem; }
+  .pub-item { grid-template-columns: 45px 1fr; gap: 1rem; }
+  .skills-table td:first-child { width: 140px; }
+  .skills-table td:nth-child(2) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Kevin Moyung</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html" class="active">Career</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="section-label">Career history</div>
+  <h1 class="ph-title">Where science,<br>code, and biology meet.</h1>
+  <p class="ph-sub">From chromatin biology at Duke to drug discovery in biotech — here's a full account of the work and the tools behind it.</p>
+</div>
+
+<!-- EXPERIENCE TIMELINE -->
+<section class="timeline-section">
+  <div class="section-label reveal">Experience</div>
+  <div class="section-title reveal">Professional history</div>
+  <div class="timeline">
+
+    <!-- CURRENT ROLE -->
+    <div class="exp-block reveal">
+      <div class="exp-meta">
+        <div class="exp-date">2022 — Present</div>
+        <div class="exp-company">Vividion Therapeutics</div>
+        <div class="exp-location">San Diego, CA</div>
+        <span class="exp-type industry">Industry</span>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">Computational Biologist</div>
+        <p class="exp-summary">
+          [Add your role description here — 2–3 sentences on the team's mission, your charter, and the biological problems you're working on at Vividion. What does winning look like for your work?]
+        </p>
+        <div class="exp-section-head">Key contributions</div>
+        <ul class="exp-highlights">
+          <li>[Add a specific, quantified contribution — e.g. "Built a multi-omics integration pipeline that reduced turnaround time for hit validation from 2 weeks to 3 days"]</li>
+          <li>[Another contribution — what ML models, genomics analyses, or tools have you shipped?]</li>
+          <li>[Any cross-functional work, collaborations, or external-facing outputs like posters, talks, or publications?]</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Python</span><span class="tag">R</span><span class="tag">Proteomics</span><span class="tag">Target ID</span><span class="tag">AWS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHD -->
+    <div class="exp-block reveal">
+      <div class="exp-meta">
+        <div class="exp-date">2017 — 2022</div>
+        <div class="exp-company">Duke University</div>
+        <div class="exp-location">Durham, NC</div>
+        <span class="exp-type academic">PhD Research</span>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">PhD Researcher — MacAlpine Lab</div>
+        <p class="exp-summary">
+          Investigated chromatin-mediated mechanisms of gene regulation with a focus on transcription. Developed computational methods to decode the regulatory information encoded in chromatin accessibility and nucleosome positioning across the genome. Co-advised by David MacAlpine and Alex Hartemink.
+        </p>
+        <div class="exp-section-head">Research focus</div>
+        <ul class="exp-highlights">
+          <li>[Dissertation chapter or key finding — e.g. "Developed a probabilistic model for transcription factor footprinting from ATAC-seq data that outperformed existing methods in sensitivity"]</li>
+          <li>[Another key project — e.g. "Identified a novel mechanism linking nucleosome remodeling to RNA Pol II pausing at enhancers genome-wide"]</li>
+          <li>[Any methods development, open-source tools, or software contributions]</li>
+          <li>Presented findings at [conferences — add yours, e.g. ENCODE Annual Meeting, CSHL, ASHG]</li>
+        </ul>
+        <div class="exp-section-head">Teaching & mentorship</div>
+        <ul class="exp-highlights">
+          <li>[Teaching assistant roles, any undergrads mentored, outreach — add yours]</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">ATAC-seq</span><span class="tag">ChIP-seq</span><span class="tag">MNase-seq</span><span class="tag">Footprinting</span><span class="tag">R</span><span class="tag">Python</span><span class="tag">HPC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERNSHIP / PRIOR ROLE — add as many as needed -->
+    <div class="exp-block reveal">
+      <div class="exp-meta">
+        <div class="exp-date">[Year] — [Year]</div>
+        <div class="exp-company">[Company or Institution]</div>
+        <div class="exp-location">[Location]</div>
+        <span class="exp-type">[Industry / Academic / Internship]</span>
+      </div>
+      <div class="exp-content">
+        <div class="exp-title">[Your Title Here]</div>
+        <p class="exp-summary">[Add a prior role — internship, rotation, undergrad research, or industry position. What was the scientific question? What did you build or discover?]</p>
+        <ul class="exp-highlights">
+          <li>[Key contribution]</li>
+          <li>[Key contribution]</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">[Tool]</span><span class="tag">[Tool]</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="pubs-section">
+  <div class="section-label reveal">Research output</div>
+  <div class="section-title reveal">Publications</div>
+  <div class="pub-list">
+
+    <div class="pub-item reveal">
+      <div class="pub-year">202X</div>
+      <div>
+        <div class="pub-title">[Your most recent paper title here]</div>
+        <div class="pub-authors"><strong>Moyung K</strong>, Co-Author A, Co-Author B, MacAlpine DM, Hartemink AJ.</div>
+        <div class="pub-journal">[Journal Name]. [Volume]:[Pages]. doi:[...]</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link">PDF</a>
+          <a href="#" class="pub-link">PubMed</a>
+          <a href="#" class="pub-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item reveal">
+      <div class="pub-year">202X</div>
+      <div>
+        <div class="pub-title">[Second paper title]</div>
+        <div class="pub-authors"><strong>Moyung K</strong>, Co-Author A, MacAlpine DM.</div>
+        <div class="pub-journal">[Journal Name]. [Volume]:[Pages].</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link">PDF</a>
+          <a href="#" class="pub-link">PubMed</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item reveal">
+      <div class="pub-year">202X</div>
+      <div>
+        <div class="pub-title">[Third paper or preprint]</div>
+        <div class="pub-authors">Co-Author A, <strong>Moyung K</strong>, MacAlpine DM.</div>
+        <div class="pub-journal">bioRxiv. doi:[...] <em>(Preprint)</em></div>
+        <div class="pub-links">
+          <a href="#" class="pub-link">bioRxiv</a>
+          <a href="#" class="pub-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS DEEP DIVE -->
+<section class="skills-deep">
+  <div class="section-label reveal">Technical skills</div>
+  <div class="section-title reveal">Tools of the trade</div>
+  <table class="skills-table reveal">
+    <thead>
+      <tr>
+        <th>Skill area</th>
+        <th>Details</th>
+        <th>Proficiency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Python</td>
+        <td>Primary language for data analysis, ML modeling, and pipeline development. Daily use for 8+ years.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="95" style="width:0%"></div></div><span class="skill-level">Expert</span></div></td>
+      </tr>
+      <tr>
+        <td>R / Bioconductor</td>
+        <td>Statistical analysis, differential expression, ggplot2 visualization, DESeq2, limma, and custom packages.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="90" style="width:0%"></div></div><span class="skill-level">Expert</span></div></td>
+      </tr>
+      <tr>
+        <td>ATAC-seq / ChIP-seq</td>
+        <td>End-to-end analysis from raw reads: alignment, peak calling, footprinting, differential accessibility.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="95" style="width:0%"></div></div><span class="skill-level">Expert</span></div></td>
+      </tr>
+      <tr>
+        <td>Machine learning</td>
+        <td>PyTorch, scikit-learn, sequence models, random forests, Bayesian inference. Applied to genomics problems.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="80" style="width:0%"></div></div><span class="skill-level">Advanced</span></div></td>
+      </tr>
+      <tr>
+        <td>Workflow management</td>
+        <td>Snakemake and Nextflow for reproducible, scalable bioinformatics pipelines on HPC and cloud.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="85" style="width:0%"></div></div><span class="skill-level">Advanced</span></div></td>
+      </tr>
+      <tr>
+        <td>Cloud / HPC</td>
+        <td>AWS (S3, EC2, Batch), SLURM-based HPC clusters, Docker/Singularity for containerized workflows.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="75" style="width:0%"></div></div><span class="skill-level">Advanced</span></div></td>
+      </tr>
+      <tr>
+        <td>Data visualization</td>
+        <td>ggplot2, matplotlib, seaborn, Plotly, D3.js. Publication figures, interactive dashboards, and web viz.</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="90" style="width:0%"></div></div><span class="skill-level">Expert</span></div></td>
+      </tr>
+      <tr>
+        <td>Single-cell analysis</td>
+        <td>Seurat, Scanpy, cell type annotation, trajectory analysis, multi-modal integration (RNA + ATAC).</td>
+        <td><div class="skill-bar-wrap"><div class="skill-bar"><div class="skill-bar-fill" data-w="78" style="width:0%"></div></div><span class="skill-level">Advanced</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 Kevin Moyung · kevinmoyung.com</span>
+  <div class="footer-links">
+    <a href="https://github.com/kmoyung" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank">LinkedIn</a>
+    <a href="mailto:kevinmoyung@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed'); io.unobserve(e.target);} }), {threshold:.06});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Animate skill bars on scroll
+const barObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) {
+    e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+      bar.style.width = bar.dataset.w + '%';
+    });
+    barObs.unobserve(e.target);
+  }
+}), {threshold: 0.3});
+document.querySelectorAll('.skills-table').forEach(t => barObs.observe(t));
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Moyung — Computational Biologist</title>
+<meta name="description" content="Kevin Moyung is a Computational Biologist at Vividion Therapeutics and Duke PhD. Genomics, chromatin biology, machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 8rem 3rem 4rem 3rem;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
+}
+.hero-tag::before { content: ''; width: 22px; height: 2px; background: var(--accent); }
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3.2rem, 5.5vw, 5.2rem);
+  line-height: 1.0; letter-spacing: -0.03em;
+  color: var(--ink); margin-bottom: 1.4rem;
+}
+h1 em { font-style: italic; color: var(--accent); }
+.hero-desc {
+  font-size: 1rem; line-height: 1.75; color: var(--muted);
+  max-width: 460px; margin-bottom: 0.75rem;
+}
+.hero-affil {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 2.5rem;
+}
+.affil-pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border); border-radius: 20px;
+  color: var(--ink2); background: var(--white);
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* DARK PANEL */
+.hero-right {
+  background: var(--dark);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.dna-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-stat-strip {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hero-stat { padding: 1.4rem 1.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.6rem; font-weight: 500;
+  color: #fff; line-height: 1; margin-bottom: 0.25rem;
+}
+.hero-stat-label {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+}
+
+/* ── SKILLS SNAPSHOT ── */
+.skills-section { background: var(--white); }
+.skills-intro { font-size: 0.95rem; color: var(--muted); max-width: 560px; margin-bottom: 2.5rem; line-height: 1.7; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5px;
+  background: var(--border);
+  border: 1.5px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.skill-card {
+  background: var(--white); padding: 1.75rem;
+  position: relative; overflow: hidden;
+  transition: background 0.2s;
+}
+.skill-card::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 0; background: var(--accent);
+  transition: height 0.3s ease;
+}
+.skill-card:hover::before { height: 100%; }
+.skill-card:hover { background: #f8f8ff; }
+.skill-icon { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--accent2); margin-bottom: 0.6rem; font-weight: 500; }
+.skill-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--ink); }
+.skill-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.9rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+/* ── FEATURED WORK STRIP ── */
+.work-strip { background: var(--dark); color: #fff; padding: 5rem 3rem; }
+.work-strip .section-label { color: var(--accent2); }
+.work-strip .section-label::after { background: var(--accent2); }
+.work-strip .section-title { color: #fff; margin-bottom: 2rem; }
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5px;
+  background: rgba(255,255,255,0.07);
+  margin-bottom: 2rem;
+}
+.work-card {
+  background: var(--dark); padding: 2rem 1.75rem;
+  transition: background 0.2s;
+  text-decoration: none; display: block;
+}
+.work-card:hover { background: #14141f; }
+.work-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: rgba(255,255,255,0.2); margin-bottom: 1.25rem; }
+.work-title { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.6rem; line-height: 1.25; }
+.work-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 1.25rem; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.work-tag {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem;
+  padding: 0.18rem 0.5rem; border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.4); border-radius: 2px;
+}
+.work-cta { display: flex; gap: 1rem; }
+
+/* ── QUICK ABOUT ── */
+.about-strip {
+  background: var(--bg);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; padding: 0;
+}
+.about-strip-left { padding: 5rem 3rem; border-right: 1px solid var(--border); }
+.about-strip-right { padding: 5rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.about-lead { font-family: 'DM Serif Display', serif; font-size: 1.5rem; line-height: 1.35; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 1.25rem; }
+.about-body { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+.about-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.edu-item { margin-bottom: 1.5rem; }
+.edu-degree { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 0.2rem; }
+.edu-school { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--accent); margin-bottom: 0.2rem; }
+.edu-detail { font-size: 0.8rem; color: var(--muted); }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 7rem 1.5rem 3rem; }
+  .about-strip { grid-template-columns: 1fr; }
+  .about-strip-left { border-right: none; border-bottom: 1px solid var(--border); padding: 3.5rem 1.5rem; }
+  .about-strip-right { padding: 3.5rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Kevin Moyung</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left reveal">
+    <span class="hero-tag">Computational Biology · Biotech</span>
+    <h1>Kevin<br><em>Moyung</em></h1>
+    <p class="hero-desc">
+      I decode the language of chromatin — using machine learning and statistical genomics to understand how cells regulate their genes.
+    </p>
+    <div class="hero-affil">
+      <span class="affil-pill">Vividion Therapeutics</span>
+      <span class="affil-pill">Duke PhD, CBB</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="career.html" class="btn-primary">View Career</a>
+      <a href="projects.html" class="btn-outline">Side Projects</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <canvas class="dna-canvas" id="dnaCanvas"></canvas>
+    <div class="hero-stat-strip">
+      <div class="hero-stat">
+        <div class="hero-stat-num">PhD</div>
+        <div class="hero-stat-label">Duke Univ.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">8+</div>
+        <div class="hero-stat-label">Years research</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">∿</div>
+        <div class="hero-stat-label">Chromatin & ML</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SNAPSHOT -->
+<section class="skills-section" id="skills">
+  <div class="section-label reveal">Technical expertise</div>
+  <div class="section-title reveal">Built for where<br>biology meets code.</div>
+  <p class="skills-intro reveal">From sequencing reads to biological insight — I build the pipelines, models, and visualizations that bridge the gap.</p>
+  <div class="skills-grid reveal">
+    <div class="skill-card">
+      <div class="skill-icon">01 / CHROMATIN</div>
+      <div class="skill-name">Chromatin & Epigenomics</div>
+      <div class="skill-desc">ATAC-seq, ChIP-seq, and MNase-seq analysis. Footprinting, nucleosome positioning, and regulatory element discovery at genome scale.</div>
+      <div class="skill-tags">
+        <span class="tag">ATAC-seq</span><span class="tag">ChIP-seq</span><span class="tag">Footprinting</span><span class="tag">Peak calling</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">02 / GENOMICS</div>
+      <div class="skill-name">Computational Genomics</div>
+      <div class="skill-desc">End-to-end bioinformatics pipelines for variant calling, transcriptomics, and multi-omics data integration on HPC clusters.</div>
+      <div class="skill-tags">
+        <span class="tag">RNA-seq</span><span class="tag">scRNA-seq</span><span class="tag">WGS</span><span class="tag">Snakemake</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">03 / ML</div>
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-desc">Statistical and deep learning models applied to biological sequences, regulatory grammar, and phenotype prediction.</div>
+      <div class="skill-tags">
+        <span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">Bayesian models</span><span class="tag">R/Stan</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">04 / SOFTWARE</div>
+      <div class="skill-name">Scientific Computing</div>
+      <div class="skill-desc">Reproducible research infrastructure: Python/R packages, containerized workflows, and cloud deployment for large-scale genomic analyses.</div>
+      <div class="skill-tags">
+        <span class="tag">Python</span><span class="tag">R</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">HPC</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">05 / DATA VIZ</div>
+      <div class="skill-name">Data Visualization</div>
+      <div class="skill-desc">Publication-quality figures and interactive dashboards communicating complex genomic data to scientific and general audiences.</div>
+      <div class="skill-tags">
+        <span class="tag">ggplot2</span><span class="tag">matplotlib</span><span class="tag">D3.js</span><span class="tag">Plotly</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">06 / REGULATION</div>
+      <div class="skill-name">Gene Regulation</div>
+      <div class="skill-desc">Deep expertise in transcription factor binding, chromatin remodeling, and the mechanistic links between chromatin state and gene expression.</div>
+      <div class="skill-tags">
+        <span class="tag">TF motifs</span><span class="tag">Nucleosomes</span><span class="tag">Transcription</span><span class="tag">ENCODE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<div class="work-strip">
+  <div class="section-label reveal">Selected projects</div>
+  <div class="section-title reveal">Things I've built<br>outside the lab.</div>
+  <div class="work-cards reveal">
+    <div class="work-card">
+      <div class="work-num">Project 01</div>
+      <div class="work-title">Add your best side project here</div>
+      <div class="work-desc">A short punchy description of what it does, the scale, and why it's interesting. Update via projects.html.</div>
+      <div class="work-tags"><span class="work-tag">Python</span><span class="work-tag">D3.js</span></div>
+    </div>
+    <div class="work-card">
+      <div class="work-num">Project 02</div>
+      <div class="work-title">Another data viz or tool</div>
+      <div class="work-desc">Maybe an interactive genomics browser, a fun music data project, or a bioinformatics tool you open-sourced.</div>
+      <div class="work-tags"><span class="work-tag">React</span><span class="work-tag">Plotly</span></div>
+    </div>
+    <div class="work-card">
+      <div class="work-num">Project 03</div>
+      <div class="work-title">Open-source contribution</div>
+      <div class="work-desc">A package, dataset, or pipeline you've released publicly. Link to GitHub or a live demo.</div>
+      <div class="work-tags"><span class="work-tag">R</span><span class="work-tag">Bioconductor</span></div>
+    </div>
+  </div>
+  <div class="work-cta reveal">
+    <a href="projects.html" class="btn-primary">See all projects</a>
+  </div>
+</div>
+
+<!-- QUICK ABOUT -->
+<div class="about-strip">
+  <div class="about-strip-left reveal">
+    <div class="section-label">Background</div>
+    <p class="about-lead">From Duke's genome center to drug discovery in San Diego.</p>
+    <p class="about-body">I completed my PhD in Computational Biology and Bioinformatics at Duke University in the MacAlpine Lab (co-advised by Alex Hartemink), where I studied chromatin-mediated mechanisms of gene regulation and transcription.</p>
+    <p class="about-body">I'm now applying those skills at Vividion Therapeutics, building computational approaches to accelerate therapeutic discovery.</p>
+    <div class="about-links">
+      <a href="about.html" class="btn-primary">Full bio</a>
+      <a href="mailto:kevinmoyung@gmail.com" class="btn-outline">Email me</a>
+    </div>
+  </div>
+  <div class="about-strip-right reveal">
+    <div class="edu-item">
+      <div class="edu-degree">PhD, Computational Biology & Bioinformatics</div>
+      <div class="edu-school">Duke University</div>
+      <div class="edu-detail">MacAlpine Lab · Co-advised: Alex Hartemink<br>Chromatin regulation & transcription</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-degree">B.S., [Your Undergrad Degree]</div>
+      <div class="edu-school">[Your Undergrad Institution]</div>
+      <div class="edu-detail">[Year] · Add your undergrad here</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-degree">Current Role</div>
+      <div class="edu-school">Vividion Therapeutics</div>
+      <div class="edu-detail">Computational Biologist · San Diego, CA</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Kevin Moyung · kevinmoyung.com</span>
+  <div class="footer-links">
+    <a href="https://github.com/kmoyung" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank">LinkedIn</a>
+    <a href="https://soundcloud.com/hellayung" target="_blank">SoundCloud</a>
+    <a href="mailto:kevinmoyung@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+// DNA helix animation
+const canvas = document.getElementById('dnaCanvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [];
+  function resize() { W = canvas.offsetWidth; H = canvas.offsetHeight; canvas.width = W; canvas.height = H; initPts(); }
+  function initPts() {
+    pts = [];
+    for (let i = 0; i < 55; i++) pts.push({ x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.8+0.4, vx: (Math.random()-.5)*.25, vy: (Math.random()-.5)*.25, a: Math.random()*.5+.15, c: Math.random()>.5?'#1a3fff':'#00c896' });
+  }
+  function draw(t) {
+    ctx.clearRect(0,0,W,H);
+    const cx=W/2, amp=W*.26, fq=0.013;
+    for (let y=0;y<=H;y+=8) {
+      const ph=y*fq+t*.38, x1=cx+Math.sin(ph)*amp, x2=cx+Math.sin(ph+Math.PI)*amp;
+      const p=(Math.sin(ph)+1)/2;
+      ctx.beginPath(); ctx.moveTo(x1,y); ctx.lineTo(x2,y);
+      ctx.strokeStyle=`rgba(120,180,255,${0.03+p*.05})`; ctx.lineWidth=.5; ctx.stroke();
+    }
+    [0,Math.PI].forEach((off,si) => {
+      ctx.beginPath();
+      for (let y=0;y<=H;y+=3) { const x=cx+Math.sin(y*fq+t*.38+off)*amp; y===0?ctx.moveTo(x,y):ctx.lineTo(x,y); }
+      ctx.strokeStyle=si===0?'rgba(26,63,255,.4)':'rgba(0,200,150,.4)'; ctx.lineWidth=1.5; ctx.stroke();
+    });
+    for (let i=0;i<8;i++) {
+      [0,Math.PI].forEach((off,si) => {
+        const y=((i+(si*.5))/8*H + t*10) % H;
+        const x=cx+Math.sin(y*fq+t*.38+off)*amp;
+        ctx.beginPath(); ctx.arc(x,y,3.2,0,Math.PI*2);
+        ctx.fillStyle=si===0?'rgba(26,63,255,.65)':'rgba(0,200,150,.65)'; ctx.fill();
+      });
+    }
+    pts.forEach(p => {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0; if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c; ctx.globalAlpha=p.a; ctx.fill(); ctx.globalAlpha=1;
+    });
+  }
+  let st=null;
+  function loop(ts) { if(!st)st=ts; draw((ts-st)/1000); requestAnimationFrame(loop); }
+  window.addEventListener('resize', resize);
+  resize(); requestAnimationFrame(loop);
+}
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);} }), {threshold:.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+setTimeout(() => document.querySelector('.hero-left')?.classList.add('revealed'), 80);
+</script>
+</body>
+</html>

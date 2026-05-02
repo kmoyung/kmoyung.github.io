@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Kevin Moyung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* HERO — centered, personal */
+.about-hero {
+  padding: 10rem 3rem 5rem;
+  display: grid; grid-template-columns: 1fr 360px;
+  gap: 5rem; align-items: start;
+  max-width: 1200px; margin: 0 auto;
+}
+.about-hero-left {}
+.hero-overline {
+  font-family: 'DM Mono', monospace; font-size: 0.68rem;
+  color: var(--accent); margin-bottom: 1.25rem; font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-overline::before { content: ''; width: 20px; height: 1.5px; background: var(--accent); }
+.about-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05; letter-spacing: -0.03em;
+  color: var(--ink); margin-bottom: 1.5rem;
+}
+.about-name em { font-style: italic; color: var(--accent); }
+.about-lead-text {
+  font-size: 1.05rem; line-height: 1.8; color: var(--muted);
+  margin-bottom: 2rem; max-width: 540px;
+}
+.about-lead-text strong { color: var(--ink); font-weight: 700; }
+.about-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* PHOTO PLACEHOLDER */
+.photo-wrap {
+  position: sticky; top: 90px;
+}
+.photo-frame {
+  width: 100%; aspect-ratio: 3/4;
+  background: var(--ink);
+  border-radius: 4px; overflow: hidden;
+  position: relative;
+}
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.5rem;
+}
+.photo-placeholder-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.photo-placeholder-icon svg { width: 28px; height: 28px; fill: rgba(255,255,255,0.4); }
+.photo-placeholder-text {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  color: rgba(255,255,255,0.25); text-align: center; line-height: 1.6;
+}
+.photo-caption {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  color: var(--muted); margin-top: 0.75rem; text-align: center;
+}
+
+/* ABOUT SECTIONS */
+.about-content { background: var(--white); }
+.about-section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 5rem 3rem;
+  border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 260px 1fr;
+  gap: 4rem;
+}
+.about-section-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+  padding-top: 0.15rem;
+}
+.about-body-text {
+  font-size: 0.92rem; color: var(--muted);
+  line-height: 1.85; margin-bottom: 1rem;
+}
+.about-body-text strong { color: var(--ink); font-weight: 700; }
+.about-body-text a { color: var(--accent); text-decoration: none; }
+.about-body-text a:hover { text-decoration: underline; }
+
+.interests-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin-top: 0.5rem;
+}
+.interest-item {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border); border-radius: 3px;
+  background: var(--bg);
+}
+.interest-name { font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 0.2rem; }
+.interest-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+/* FACT ROW */
+.fact-row {
+  display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.25rem;
+}
+.fact-item { display: flex; gap: 1rem; align-items: baseline; }
+.fact-key {
+  font-family: 'DM Mono', monospace; font-size: 0.68rem;
+  color: var(--accent); min-width: 110px; font-weight: 500;
+}
+.fact-val { font-size: 0.85rem; color: var(--ink2); line-height: 1.5; }
+
+/* CONTACT SECTION */
+.contact-section { background: var(--ink); padding: 6rem 3rem; color: #fff; }
+.contact-inner { max-width: 700px; }
+.contact-section .section-label { color: var(--accent2); }
+.contact-section .section-label::after { background: var(--accent2); }
+.contact-section .section-title { color: #fff; }
+.contact-desc { font-size: 0.95rem; color: rgba(255,255,255,.45); line-height: 1.8; margin-bottom: 2.5rem; max-width: 500px; }
+.contact-methods { display: flex; flex-direction: column; gap: 1.5px; background: rgba(255,255,255,0.07); margin-bottom: 2rem; }
+.contact-method {
+  background: var(--ink); padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  text-decoration: none; transition: background 0.15s;
+}
+.contact-method:hover { background: #14141f; }
+.contact-method-label {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+.contact-method-val { font-size: 0.9rem; color: #fff; font-weight: 600; }
+.contact-method-arrow { color: rgba(255,255,255,0.2); font-size: 1rem; transition: color 0.15s; }
+.contact-method:hover .contact-method-arrow { color: var(--accent2); }
+
+@media (max-width: 900px) {
+  .about-hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 8rem 1.5rem 3rem; }
+  .photo-wrap { position: static; }
+  .photo-frame { max-width: 260px; aspect-ratio: 1; }
+  .about-section { grid-template-columns: 1fr; gap: 1.25rem; padding: 3.5rem 1.5rem; }
+  .contact-section { padding: 4rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Kevin Moyung</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="about-hero-left reveal">
+    <div class="hero-overline">About me</div>
+    <h1 class="about-name">Hi, I'm<br><em>Kevin.</em></h1>
+    <p class="about-lead-text">
+      I'm a <strong>Computational Biologist at Vividion Therapeutics</strong> in San Diego. I completed my PhD in Computational Biology and Bioinformatics at <strong>Duke University</strong>, where I spent five years studying how chromatin structure shapes gene regulation.
+    </p>
+    <p class="about-lead-text">
+      I write code, analyze genomes, build tools, make music, and think a lot about how cells decide what genes to turn on. Sometimes I do all of these on the same day.
+    </p>
+    <div class="about-ctas">
+      <a href="career.html" class="btn-primary">View career</a>
+      <a href="Kevin_Moyung_CV_Nov2022_Redacted.pdf" target="_blank" class="btn-outline">Download CV</a>
+      <a href="mailto:kevinmoyung@gmail.com" class="btn-outline">Say hello</a>
+    </div>
+  </div>
+
+  <div class="photo-wrap reveal">
+    <div class="photo-frame">
+      <!-- Replace src with your actual headshot path: Headshot_Github.png or Headshot_KevinMoyung.jpg -->
+      <img src="Headshot_KevinMoyung.jpg" alt="Kevin Moyung" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex';">
+      <div class="photo-placeholder" id="photoFallback" style="display:none;">
+        <div class="photo-placeholder-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        </div>
+        <div class="photo-placeholder-text">Add Headshot_KevinMoyung.jpg<br>to repo root</div>
+      </div>
+    </div>
+    <p class="photo-caption">Kevin Moyung · San Diego, CA</p>
+  </div>
+</div>
+
+<!-- ABOUT CONTENT -->
+<div class="about-content">
+
+  <div class="about-section reveal">
+    <div class="about-section-label">The science</div>
+    <div>
+      <p class="about-body-text">
+        My PhD research in the <a href="http://macalpine-lab.duhs.duke.edu/" target="_blank">MacAlpine Lab</a> at Duke (co-advised by <strong>Alex Hartemink</strong>) centered on a simple but deep question: how does chromatin structure determine which genes get turned on, in which cells, at which times?
+      </p>
+      <p class="about-body-text">
+        I developed computational methods for analyzing chromatin accessibility data — particularly <strong>ATAC-seq</strong> and <strong>MNase-seq</strong> — to map transcription factor binding, nucleosome positioning, and regulatory element activity across the genome. A lot of footprinting. A lot of peak calling. A lot of staring at genome browser tracks.
+      </p>
+      <p class="about-body-text">
+        Now at <strong>Vividion Therapeutics</strong>, I apply those skills in a drug discovery context — using computational approaches to identify and prioritize therapeutic targets. [Add a sentence here about your specific work at Vividion if you're comfortable sharing it.]
+      </p>
+    </div>
+  </div>
+
+  <div class="about-section reveal">
+    <div class="about-section-label">Quick facts</div>
+    <div>
+      <div class="fact-row">
+        <div class="fact-item">
+          <span class="fact-key">Based in</span>
+          <span class="fact-val">San Diego, CA</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Education</span>
+          <span class="fact-val">PhD, Computational Biology & Bioinformatics — Duke University</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Undergrad</span>
+          <span class="fact-val">[Your undergrad institution and degree — add this]</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Current role</span>
+          <span class="fact-val">Computational Biologist, Vividion Therapeutics</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Research area</span>
+          <span class="fact-val">Chromatin biology, epigenomics, transcription regulation, ML for genomics</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Music alias</span>
+          <span class="fact-val"><a href="https://soundcloud.com/hellayung" target="_blank" style="color:var(--accent);">hellayung on SoundCloud ↗</a></span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-key">Languages</span>
+          <span class="fact-val">Python (expert), R (expert), Bash, JavaScript, [add others]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section reveal">
+    <div class="about-section-label">Outside the lab</div>
+    <div>
+      <p class="about-body-text" style="margin-bottom:1.5rem;">
+        When I'm not analyzing genomes, I'm usually making music. I produce under the name <a href="https://soundcloud.com/hellayung" target="_blank"><strong>hellayung</strong></a> — [add a sentence about your sound/genre/influences]. I find that the creative problem-solving in music production and in computational biology have a lot more in common than you'd think.
+      </p>
+      <div class="interests-grid">
+        <div class="interest-item">
+          <div class="interest-name">Music production</div>
+          <div class="interest-desc">Making beats and electronic music as hellayung. [Genre/influences]</div>
+        </div>
+        <div class="interest-item">
+          <div class="interest-name">[Hobby 2]</div>
+          <div class="interest-desc">Add something real here — hiking, climbing, cooking, gaming, etc.</div>
+        </div>
+        <div class="interest-item">
+          <div class="interest-name">[Hobby 3]</div>
+          <div class="interest-desc">Another genuine interest outside of science. This page should feel like you.</div>
+        </div>
+        <div class="interest-item">
+          <div class="interest-name">Data viz for fun</div>
+          <div class="interest-desc">Building side projects just to see what's possible with public datasets.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section reveal" style="border-bottom:none;">
+    <div class="about-section-label">What I'm looking for</div>
+    <div>
+      <p class="about-body-text">
+        [Optional — if you're open to opportunities, add a sentence here. Or if you're not looking, remove this section entirely. Something like: "I'm always open to conversations about interesting problems at the intersection of genomics and machine learning. If you're working on something that fits that description, I'd love to hear about it."]
+      </p>
+      <p class="about-body-text">
+        You can also find me on <a href="https://github.com/kmoyung" target="_blank">GitHub</a> where I occasionally open-source tools and pipelines from my research, and on <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank">LinkedIn</a> for professional stuff.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="section-label reveal">Get in touch</div>
+    <div class="section-title reveal">Let's connect.</div>
+    <p class="contact-desc reveal">Collaborations, opportunities, science questions, or just want to say hi — my inbox is open.</p>
+    <div class="contact-methods reveal">
+      <a href="mailto:kevinmoyung@gmail.com" class="contact-method">
+        <div>
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-val">kevinmoyung@gmail.com</div>
+        </div>
+        <span class="contact-method-arrow">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank" class="contact-method">
+        <div>
+          <div class="contact-method-label">LinkedIn</div>
+          <div class="contact-method-val">linkedin.com/in/kevinmoyung</div>
+        </div>
+        <span class="contact-method-arrow">↗</span>
+      </a>
+      <a href="https://github.com/kmoyung" target="_blank" class="contact-method">
+        <div>
+          <div class="contact-method-label">GitHub</div>
+          <div class="contact-method-val">github.com/kmoyung</div>
+        </div>
+        <span class="contact-method-arrow">↗</span>
+      </a>
+      <a href="https://soundcloud.com/hellayung" target="_blank" class="contact-method">
+        <div>
+          <div class="contact-method-label">Music</div>
+          <div class="contact-method-val">soundcloud.com/hellayung</div>
+        </div>
+        <span class="contact-method-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 Kevin Moyung · kevinmoyung.com</span>
+  <div class="footer-links">
+    <a href="https://github.com/kmoyung" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank">LinkedIn</a>
+    <a href="https://soundcloud.com/hellayung" target="_blank">SoundCloud</a>
+    <a href="mailto:kevinmoyung@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);} }), {threshold:.06});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+setTimeout(() => { document.querySelectorAll('.about-hero .reveal').forEach(el => el.classList.add('revealed')); }, 80);
+</script>
+</body>
+</html>

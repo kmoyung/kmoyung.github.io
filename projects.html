@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Kevin Moyung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* PAGE HEADER — dark with grid overlay */
+.page-header {
+  padding: 9rem 3rem 4rem;
+  background: var(--ink);
+  color: #fff;
+  position: relative; overflow: hidden;
+}
+.grid-overlay {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.page-header .section-label { color: var(--accent2); position: relative; z-index: 1; }
+.page-header .section-label::after { background: var(--accent2); }
+.ph-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05; letter-spacing: -0.02em; color: #fff;
+  margin-bottom: 1rem; position: relative; z-index: 1;
+}
+.ph-sub { font-size: 0.95rem; color: rgba(255,255,255,.45); max-width: 520px; line-height: 1.7; position: relative; z-index: 1; }
+
+/* FILTER BAR */
+.filter-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 3rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  flex-wrap: wrap;
+  position: sticky; top: 62px; z-index: 50;
+}
+.filter-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); margin-right: 0.5rem; white-space: nowrap; }
+.filter-btn {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  padding: 0.3rem 0.75rem; border: 1px solid var(--border);
+  background: transparent; color: var(--muted);
+  border-radius: 20px; cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--ink); color: #fff; border-color: var(--ink);
+}
+
+/* PROJECTS GRID */
+.projects-main { background: var(--bg); padding: 4rem 3rem; }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5px;
+  background: var(--border);
+  border: 1.5px solid var(--border);
+}
+.project-card {
+  background: var(--white);
+  padding: 0;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  transition: background 0.2s;
+}
+.project-card:hover { background: #fafafe; }
+.project-card:hover .project-thumb { transform: scale(1.03); }
+
+/* Placeholder preview area */
+.project-thumb {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--ink);
+  position: relative; overflow: hidden;
+  transition: transform 0.4s ease;
+  display: flex; align-items: center; justify-content: center;
+}
+.project-thumb-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; color: rgba(255,255,255,0.2);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-thumb canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.project-body { padding: 1.5rem 1.75rem 1.75rem; flex: 1; display: flex; flex-direction: column; }
+.project-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-bottom: 0.6rem; }
+.project-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem; color: var(--ink); line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.project-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.1rem; }
+.project-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--border); padding-top: 1rem;
+}
+.project-status {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  padding: 0.18rem 0.55rem; border-radius: 20px;
+}
+.project-status.live { background: #e0faf3; color: #007a5a; }
+.project-status.wip { background: #fff8e0; color: #9a6a00; }
+.project-status.archived { background: var(--subtle); color: var(--muted); }
+.project-links { display: flex; gap: 0.5rem; }
+.project-link {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  padding: 0.2rem 0.55rem; border: 1px solid var(--border);
+  color: var(--ink2); text-decoration: none; border-radius: 2px;
+  transition: all 0.15s;
+}
+.project-link:hover { border-color: var(--accent); color: var(--accent); }
+
+/* HIDDEN for filtering */
+.project-card.hidden { display: none; }
+
+/* MUSIC NOTE */
+.music-section { background: var(--white); padding: 5rem 3rem; }
+.music-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5px; background: var(--border); border: 1.5px solid var(--border);
+}
+.music-card {
+  background: var(--white); padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  transition: background 0.2s;
+}
+.music-card:hover { background: #f8f8ff; }
+.music-thumb {
+  width: 100%; aspect-ratio: 1;
+  background: var(--subtle); border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.music-thumb-icon { font-size: 2rem; }
+.music-title { font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+.music-meta { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
+.music-link {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  color: var(--accent); text-decoration: none;
+  margin-top: auto;
+}
+.music-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .page-header { padding: 7rem 1.5rem 3rem; }
+  .filter-bar { padding: 0.75rem 1.5rem; top: 56px; }
+  .projects-main { padding: 3rem 1.5rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .music-section { padding: 3.5rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Kevin Moyung</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="grid-overlay"></div>
+  <div class="section-label">Side projects</div>
+  <h1 class="ph-title">Data viz &amp; tools<br>built for curiosity.</h1>
+  <p class="ph-sub">Side projects spanning genomics dashboards, generative art, music production, and anything else that seemed like a good idea at 11pm.</p>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="dataviz">Data viz</button>
+  <button class="filter-btn" data-filter="genomics">Genomics</button>
+  <button class="filter-btn" data-filter="tool">Tools</button>
+  <button class="filter-btn" data-filter="art">Generative art</button>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects-main">
+  <div class="projects-grid" id="projectGrid">
+
+    <!-- PROJECT 1 — replace with real ones -->
+    <div class="project-card reveal" data-tags="dataviz genomics">
+      <div class="project-thumb">
+        <canvas id="c1"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 01</div>
+        <div class="project-name">Genomic Browser / Interactive Viewer</div>
+        <div class="project-desc">An example project card. Replace this with a real side project — maybe an interactive ATAC-seq browser, a custom genome viewer, or a dashboard you built to explore your own data.</div>
+        <div class="project-tags">
+          <span class="tag">D3.js</span><span class="tag">Python</span><span class="tag">Flask</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status live">Live</span>
+          <div class="project-links">
+            <a href="#" class="project-link">Demo ↗</a>
+            <a href="https://github.com/kmoyung" class="project-link">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="dataviz art">
+      <div class="project-thumb">
+        <canvas id="c2"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 02</div>
+        <div class="project-name">Generative / Data Art Project</div>
+        <div class="project-desc">Maybe you've turned genomic data into generative art, mapped genome-wide accessibility into visual patterns, or built something just for aesthetics. Add it here.</div>
+        <div class="project-tags">
+          <span class="tag">p5.js</span><span class="tag">Python</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status live">Live</span>
+          <div class="project-links">
+            <a href="#" class="project-link">View ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="tool genomics">
+      <div class="project-thumb">
+        <canvas id="c3"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 03</div>
+        <div class="project-name">Open-Source Bioinformatics Tool</div>
+        <div class="project-desc">A pipeline, R package, or Python tool you've open-sourced. How many people use it? What problem does it solve? Any citations, stars, or downloads?</div>
+        <div class="project-tags">
+          <span class="tag">R</span><span class="tag">Bioconductor</span><span class="tag">Snakemake</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status live">Open source</span>
+          <div class="project-links">
+            <a href="https://github.com/kmoyung" class="project-link">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="dataviz">
+      <div class="project-thumb">
+        <canvas id="c4"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 04</div>
+        <div class="project-name">Another Data Visualization</div>
+        <div class="project-desc">A dashboard, scrollytelling piece, or exploratory analysis you built outside of work. Sports data? Music listening history? Neighborhood maps? Anything goes here.</div>
+        <div class="project-tags">
+          <span class="tag">Plotly</span><span class="tag">Dash</span><span class="tag">Pandas</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status wip">In progress</span>
+          <div class="project-links">
+            <a href="#" class="project-link">Preview ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="art">
+      <div class="project-thumb">
+        <canvas id="c5"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 05</div>
+        <div class="project-name">Creative Coding Experiment</div>
+        <div class="project-desc">A generative art piece, a fun weekend experiment, or something you built just to see if you could. This slot is for the "weird projects" category.</div>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span><span class="tag">Canvas</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status archived">Experiment</span>
+          <div class="project-links">
+            <a href="#" class="project-link">View ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="tool dataviz">
+      <div class="project-thumb">
+        <canvas id="c6"></canvas>
+        <span class="project-thumb-label">Add screenshot</span>
+      </div>
+      <div class="project-body">
+        <div class="project-num">Project 06</div>
+        <div class="project-name">[Your 6th project]</div>
+        <div class="project-desc">Add more real projects here. Replace all placeholder cards with your actual work — each card should link to a live demo or GitHub repo.</div>
+        <div class="project-tags">
+          <span class="tag">[Tool]</span><span class="tag">[Tool]</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status wip">In progress</span>
+          <div class="project-links">
+            <a href="https://github.com/kmoyung" class="project-link">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section class="music-section">
+  <div class="section-label reveal">Sound</div>
+  <div class="section-title reveal">Music production<br>on the side.</div>
+  <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;max-width:500px;line-height:1.7;" class="reveal">Outside the lab I make music under the name <strong>hellayung</strong>. You can find my work on SoundCloud.</p>
+  <div class="music-grid reveal">
+    <div class="music-card">
+      <div class="music-thumb"><span class="music-thumb-icon">♪</span></div>
+      <div class="music-title">[Track or EP name]</div>
+      <div class="music-meta">[Genre] · [Year]</div>
+      <a href="https://soundcloud.com/hellayung" target="_blank" class="music-link">Listen on SoundCloud ↗</a>
+    </div>
+    <div class="music-card">
+      <div class="music-thumb"><span class="music-thumb-icon">♫</span></div>
+      <div class="music-title">[Track or EP name]</div>
+      <div class="music-meta">[Genre] · [Year]</div>
+      <a href="https://soundcloud.com/hellayung" target="_blank" class="music-link">Listen on SoundCloud ↗</a>
+    </div>
+    <div class="music-card">
+      <div class="music-thumb"><span class="music-thumb-icon">🎛</span></div>
+      <div class="music-title">All tracks</div>
+      <div class="music-meta">hellayung · SoundCloud</div>
+      <a href="https://soundcloud.com/hellayung" target="_blank" class="music-link">View full profile ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 Kevin Moyung · kevinmoyung.com</span>
+  <div class="footer-links">
+    <a href="https://github.com/kmoyung" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/kevinmoyung/" target="_blank">LinkedIn</a>
+    <a href="https://soundcloud.com/hellayung" target="_blank">SoundCloud</a>
+    <a href="mailto:kevinmoyung@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);} }), {threshold:.06});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      card.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+    });
+  });
+});
+
+// Generative thumb previews (abstract patterns for each card)
+function drawPattern(id, hue, seed) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  c.width = c.offsetWidth; c.height = c.offsetHeight;
+  const W = c.width, H = c.height;
+  ctx.fillStyle = '#0d0d18'; ctx.fillRect(0,0,W,H);
+  const r = (n) => { seed = (seed * 1664525 + 1013904223) & 0xffffffff; return (seed >>> 0) / 0xffffffff; };
+  for (let i = 0; i < 6; i++) {
+    const x = r() * W, y = r() * H, rad = r() * 80 + 30;
+    const grad = ctx.createRadialGradient(x, y, 0, x, y, rad);
+    grad.addColorStop(0, `hsla(${hue + r()*40}, 80%, 60%, 0.18)`);
+    grad.addColorStop(1, `hsla(${hue}, 60%, 40%, 0)`);
+    ctx.fillStyle = grad; ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI*2); ctx.fill();
+  }
+  for (let i = 0; i < 20; i++) {
+    const x = r()*W, y = r()*H;
+    ctx.beginPath(); ctx.arc(x, y, r()*2+.5, 0, Math.PI*2);
+    ctx.fillStyle = `hsla(${hue}, 70%, 70%, ${r()*.4+.1})`; ctx.fill();
+  }
+  for (let i = 0; i < 3; i++) {
+    ctx.beginPath();
+    ctx.moveTo(r()*W, r()*H);
+    for (let j = 0; j < 4; j++) ctx.lineTo(r()*W, r()*H);
+    ctx.strokeStyle = `hsla(${hue+60}, 60%, 60%, 0.12)`; ctx.lineWidth = 1; ctx.stroke();
+  }
+}
+drawPattern('c1', 220, 42);
+drawPattern('c2', 160, 77);
+drawPattern('c3', 200, 13);
+drawPattern('c4', 280, 88);
+drawPattern('c5', 30,  55);
+drawPattern('c6', 190, 31);
+</script>
+</body>
+</html>
